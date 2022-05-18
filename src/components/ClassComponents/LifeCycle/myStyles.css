@@ -1,0 +1,23 @@
+.container{
+    padding: 5px;
+    display:flex;
+    align-items: center;
+}
+.box{
+    width: 600px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+input {
+    resize: horizontal;
+    width: 200px;
+}
+
+input:active {
+    width: auto;   
+}
+
+input:focus {
+    min-width: 200px;
+}
