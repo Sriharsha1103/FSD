@@ -1,14 +1,19 @@
 import './App.css';
-import React from 'react'
-import MyClock from './components/ClassComponents/MyClock';
-import MyClock1 from './components/FunctionalComponents/MyClock1';
+import React, { createContext } from 'react'
+import Child1 from './components/LiftingState/Child1';
+import Child2 from './components/LiftingState/Child2';
+import ContextDemo from './components/ClassComponents/ContextDemo';
 
 
+export const MyContext = createContext()
 const App = () => {
   return (
     <div className='App'>
-      <MyClock />
-      <MyClock1 />
+      <MyContext.Provider value='Sri Harsha'>
+        <Child1 />
+        <Child2 />
+        <ContextDemo />
+      </MyContext.Provider>
     </div>
   )
 }
